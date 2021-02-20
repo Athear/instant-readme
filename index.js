@@ -4,13 +4,37 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
-const questions = [	{
-    type: "input", //what kind of input it is supposed to be. Check docs for all types
-    name: "title", //the variable that the response will be returned as
-    message: "Enter the title of your project", //the question to be displayed to the user
-    // choices: [] //if the type requires selectable choices, those choices go here. can be ommited otherwise
-    //type = 'checkbox' or 'list' require choices.
-}
+const questions = [
+    {
+        type: "input",
+        name: "title",
+        message: "Enter the title of your project"
+    },
+    {
+        type: "input",
+        name: "desc",
+        message: "Enter a description for your project"
+    },
+    {
+        type: "input",
+        name: "installation",
+        message: "Enter intallation instructions [npm i]"
+    },
+    {
+        type: "input",
+        name: "usage",
+        message: "Enter usage information"
+    },
+    {
+        type: "input",
+        name: "contribute",
+        message: "Enter contribution guidelines"
+    },
+    {
+        type: "input",
+        name: "test",
+        message: "Enter test instructions"
+    }
 ];
 
 // TODO: Create a function to write README file
