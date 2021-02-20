@@ -15,14 +15,14 @@ const questions = [	{
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    console.log(data.title)
+    fs.writeFile("./assets/"+fileName,generateMarkdown(data),(err)=>{console.error(err)})
 
 }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-    .then((response)=>{writeToFile("",response)})
+    .then((response)=>{writeToFile("readme.md",response)})
     .catch((err)=>{console.error(err)});
 }
 

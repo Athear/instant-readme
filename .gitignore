@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# program output
+output/readme.md
