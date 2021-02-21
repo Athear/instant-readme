@@ -27,19 +27,30 @@ const questions = [
     },
     {
         type: "input",
-        name: "contribute",
-        message: "Enter contribution guidelines"
+        name: "test",
+        message: "Enter test instructions [omit]"
     },
     {
         type: "input",
-        name: "test",
-        message: "Enter test instructions"
+        name: "credits",
+        message: "Enter credits [omit]"
+    },
+    {
+        type: "input",
+        name: "contribute",
+        message: "Enter contribution guidelines [omit]"
+    },
+    {
+        type: "input",
+        name: "contribute",
+        message: "Enter contribution guidelines [omit]"
     }
+
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile("./assets/"+fileName,generateMarkdown(data),(err)=>{console.error(err)})
+    fs.writeFile("./output/"+fileName,generateMarkdown(data),(err)=>{console.error(err)})
 
 }
 
