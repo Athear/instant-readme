@@ -39,11 +39,6 @@ const questions = [
         type: "input",
         name: "contribute",
         message: "Enter contribution guidelines [omit]"
-    },
-    {
-        type: "input",
-        name: "contribute",
-        message: "Enter contribution guidelines [omit]"
     }
 
 ];

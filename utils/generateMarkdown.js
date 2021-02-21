@@ -10,32 +10,55 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
-function renderContribution(contributionMD){}
+function renderTests(testsMD){
+  let retStr = ''
+  if(testsMD){
+    retStr = `## Tests\n${testsMD}\n\n`
+  }
+  return retStr;
+}
+
+function renderCredits(creditsMD){
+  let retStr = ''
+  if(creditsMD){
+    retStr = `## Credits\n${creditsMD}\n\n`
+  }
+  return retStr;
+}
+
+function renderContribution(contributionMD){
+  let retStr = ''
+  if(contributionMD){
+    retStr = `## Contributing\n${contributionMD}\n\n`
+  }
+  return retStr;
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return 
+ const md=  
 `# ${data.title}
-${description}
+${data.desc}
 
 ----- 
 ## Table of Contents
 [toc]
 
-## Instalation
+-----
+## Installation
 ${data.installation? data.installation : 'Install with ``` npm i ```'}
 
 ## Usage
 ${data.usage}
 
-${renderTests(data.test)}
+-----
+${renderTests(data.test)}${renderCredits(data.credits)}${renderContribution(data.contribute)}
 
-${renderCredits(data.credits)}
-
-${renderContribution(data.contribute)}
 
 
 `;
+
+return md;
 }
 
 module.exports = generateMarkdown;
