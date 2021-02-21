@@ -39,6 +39,18 @@ const questions = [
         type: "input",
         name: "contribute",
         message: "Enter contribution guidelines [omit]"
+    },
+    {
+        type: "list",
+        name: "license",
+        message: "Choose license",
+        choices: ['Unlicense','MIT','Apache','GNU GPL'],
+        default: 2
+    },
+    {
+        type: "input",
+        name: "gituser",
+        message: "Enter GitHub user name"
     }
 
 ];
