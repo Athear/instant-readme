@@ -1,14 +1,44 @@
+let supportedLicenses = {
+  Unlicense:{
+    link:'https://spdx.org/licenses/Unlicense.html',
+    badge:''
+  },
+  MIT:{
+    link: 'https://spdx.org/licenses/MIT.html',
+    badge:''
+  },
+  Apache:{
+    link:'https://spdx.org/licenses/Apache-2.0.html',
+    badge:''
+  },
+  GNU_GPL:{
+    link:'https://spdx.org/licenses/GPL-3.0-or-later.html',
+    badge:''
+  }
+
+}
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  let licenseArray = ['Unlicense','MIT','Apache','GNU_GPL'];
+  let link = `[${license}](${supportedLicenses[license].link})`
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+
+  let retStr = 
+  `
+  ## License
+  Licensed under the ${renderLicenseLink(license)} license.
+  `
+}
 
 function renderTests(testsMD){
   let retStr = ''
@@ -55,7 +85,7 @@ ${data.usage}
 -----
 ${renderTests(data.test)}${renderCredits(data.credits)}${renderContribution(data.contribute)}
 
-## License
+
 ${renderLicenseSection(data.license)}
 
 

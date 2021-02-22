@@ -44,7 +44,7 @@ const questions = [
         type: "list",
         name: "license",
         message: "Choose license",
-        choices: ['Unlicense','MIT','Apache','GNU GPL'],
+        choices: ['Unlicense','MIT','Apache','GNU_GPL'],
         default: 2
     },
     {
