@@ -26,7 +26,7 @@ function renderLicenseBadge(license) {}
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   // let licenseArray = ['Unlicense','MIT','Apache','GNU_GPL'];
-  return `[${license}](${supportedLicenses[license].link})`;
+  return `[${license.replace('_',' ')}](${supportedLicenses[license].link})`;
 }
 
 // TODO: Create a function that returns the license section of README
