@@ -98,6 +98,9 @@ ${renderTests(data.test)}${renderCredits(data.credits)}${renderContribution(data
 ${renderLicenseSection(data.license)}
 
 
+## Questions
+For additional questions, find me on [GitHub](https://github.com/${data.gituser}) or email me at ${data.email}.
+
 `;
 
 return md;
