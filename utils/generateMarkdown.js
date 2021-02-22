@@ -1,42 +1,51 @@
 let supportedLicenses = {
   Unlicense:{
     link:'https://spdx.org/licenses/Unlicense.html',
-    badge:''
+    badge:'https://img.shields.io/badge/license-Unlicense-lightgray'
   },
   MIT:{
     link: 'https://spdx.org/licenses/MIT.html',
-    badge:''
+    badge:'https://img.shields.io/badge/license-MIT-green'
   },
   Apache:{
     link:'https://spdx.org/licenses/Apache-2.0.html',
-    badge:''
+    badge:'https://img.shields.io/badge/license-Apache%202-blue'
   },
   GNU_GPL:{
     link:'https://spdx.org/licenses/GPL-3.0-or-later.html',
-    badge:''
+    badge:'https://img.shields.io/badge/license-GPL-blue'
   }
 
 }
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  let retStr = '';
+  if(license){
+    retStr = 
+    `![license:${license}](${supportedLicenses[license].badge})\n`;
+  }
+  return retStr;
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  // let licenseArray = ['Unlicense','MIT','Apache','GNU_GPL'];
   return `[${license.replace('_',' ')}](${supportedLicenses[license].link})`;
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  let retStr = 
+  let retStr = '';
+  if(license){
+  retStr = 
   `
   ## License
   Licensed under the ${renderLicenseLink(license)} license.
   `;
+  }
   return retStr
 }
 
