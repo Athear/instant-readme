@@ -30,11 +30,11 @@ const questions = [
         name: "test",
         message: "Enter test instructions [omit]"
     },
-    {
-        type: "input",
-        name: "credits",
-        message: "Enter credits [omit]"
-    },
+    // {
+    //     type: "input",
+    //     name: "credits",
+    //     message: "Enter credits [omit]"
+    // },
     {
         type: "input",
         name: "contribute",

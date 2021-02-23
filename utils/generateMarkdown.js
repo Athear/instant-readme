@@ -92,6 +92,7 @@ function generateMarkdown(data) {
  const md=  
 `# ${data.title}
 ${renderLicenseBadge(data.license)}
+## Description
 ${data.desc}
 
 ----- 
@@ -107,7 +108,6 @@ ${data.usage}
 
 -----
 ${renderTests(data.test)}${renderCredits(data.credits)}${renderContribution(data.contribute)}
-
 
 ${renderLicenseSection(data.license)}
 
