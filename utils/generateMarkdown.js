@@ -73,6 +73,20 @@ function renderContribution(contributionMD){
   return retStr;
 }
 
+function renderTOC(data){
+  let retStr =
+  `
+* [Installation](#installation)
+* [Usage](#usage)
+${data.test?'* [Tests](#tests)':''}
+${data.credits?'* [Credits](#credits)':''}
+${data.contribute?'* [Contribution](#contribution)':''}
+* [License](#license)
+* [Questions](#questions)
+`
+return retStr;
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
  const md=  
@@ -82,7 +96,7 @@ ${data.desc}
 
 ----- 
 ## Table of Contents
-[toc]
+${renderTOC(data)}
 
 -----
 ## Installation
